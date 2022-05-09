@@ -122,7 +122,8 @@ var Freezer = function( initialValue, options ) {
 			return frozen;
 		},
 		set: function( node ){
-			frozen.reset( node );
+			//frozen.reset( node );			
+			if (typeof frozen?.reset == 'function') frozen.reset( node );
 		},
 		getEventHub: function(){
 			return hub;
